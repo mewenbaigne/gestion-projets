@@ -1,0 +1,12 @@
+# Données et services locaux
+mysql-data/
+phpmyadmin/
+*.log
+*.pid
+*.sock
+*.sock.lock
+
+# Ancienne version procédurale (sauvegarde locale)
+app-ancien/
+
+.DS_Store

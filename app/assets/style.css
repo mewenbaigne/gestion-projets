@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f4f6f8; color: #1f2933; line-height: 1.5; }
+nav { display: flex; align-items: center; gap: 1rem; padding: .8rem 1.5rem; background: #1f2933; color: #fff; }
+nav a, nav button.link { color: #fff; text-decoration: none; background: none; border: 0; font: inherit; cursor: pointer; padding: 0; }
+nav a:hover, nav button.link:hover { text-decoration: underline; }
+nav .spacer { flex: 1; }
+nav .who { opacity: .75; font-size: .9rem; }
+form.inline { display: inline; margin: 0; }
+main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+h1 { margin-top: 0; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+th, td { padding: .65rem .9rem; text-align: left; border-bottom: 1px solid #e4e7eb; }
+th { background: #e4e7eb; font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; }
+tr:last-child td { border-bottom: 0; }
+.card { background: #fff; border-radius: 8px; padding: 1.2rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); margin-bottom: 1rem; }
+.flash { padding: .75rem 1rem; border-radius: 6px; margin-bottom: 1rem; }
+.flash.ok { background: #d9f2e1; color: #14532d; }
+.flash.erreur { background: #fde2e2; color: #7f1d1d; }
+label { display: block; margin: .8rem 0 .25rem; font-weight: 600; }
+input[type=text], input[type=email], input[type=password], input[type=date], select { width: 100%; padding: .55rem .7rem; border: 1px solid #cbd2d9; border-radius: 6px; font: inherit; background: #fff; }
+.btn, button.btn { display: inline-block; padding: .5rem 1rem; border: 0; border-radius: 6px; background: #2563eb; color: #fff; font: inherit; text-decoration: none; cursor: pointer; }
+.btn.secondaire { background: #52606d; }
+.btn.danger { background: #c53030; }
+.btn.petit { padding: .25rem .6rem; font-size: .85rem; }
+.actions { display: flex; gap: .4rem; align-items: center; }
+.badge { display: inline-block; padding: .1rem .55rem; border-radius: 999px; font-size: .8rem; background: #e4e7eb; }
+.badge.todo { background: #e4e7eb; }
+.badge.doing { background: #fef3c7; color: #92400e; }
+.badge.done { background: #d9f2e1; color: #14532d; }
+.badge.p3 { background: #fde2e2; color: #7f1d1d; }
+.badge.p2 { background: #dbeafe; color: #1e3a8a; }
+.badge.p1 { background: #e4e7eb; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.muted { color: #7b8794; }
+.tasks-grid { display: grid; gap: .8rem; }
+
+/* Gestion de projets : états des tâches, textarea, cases à cocher */
+.badge.a_faire { background: #e4e7eb; }
+.badge.en_cours { background: #fef3c7; color: #92400e; }
+.badge.termine { background: #d9f2e1; color: #14532d; }
+.badge.annule { background: #fde2e2; color: #7f1d1d; }
+textarea { width: 100%; font: inherit; padding: .5rem; border: 1px solid #cbd2d9; border-radius: 6px; box-sizing: border-box; }
+label.check { display: block; font-weight: normal; margin: .25rem 0; }
+label.check input { width: auto; }
+h2 { margin-top: 1.6rem; }
+[hidden] { display: none !important; }
+
+/* Fil de commentaires et réponses */
+.fil .fil { margin-left: 1.5rem; padding-left: .8rem; border-left: 3px solid #cbd2d9; }
+.fil.niveau-4 .fil { margin-left: 0; } /* plafond d'indentation */
+.card.commentaire { margin-bottom: .6rem; }
+.card.commentaire p { margin: .5rem 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+details.repondre summary { list-style: none; cursor: pointer; display: inline-block; }
+details.repondre summary::-webkit-details-marker { display: none; }
+details.repondre[open] { flex-basis: 100%; }
+details.repondre form { margin-top: .5rem; }
+
+/* Classes utilitaires (remplacent les style="" interdits par la CSP) */
+.nomargin { margin: 0; }
+select.auto, input.auto { width: auto; }
+.filtres { flex-wrap: wrap; }
+.etroit { max-width: 420px; }
+.mt { margin-top: 1.2rem; }
+.mb0 { margin-bottom: 0; }
+.mt-s { margin: .4rem 0 0; }
+.entre { justify-content: space-between; }
+input[type=search] { padding: .55rem .7rem; border: 1px solid #cbd2d9; border-radius: 6px; font: inherit; background: #fff; }
+.filtres input[type=search] { width: 14rem; }
+.filtres .groupe { display: flex; gap: .4rem; align-items: center; }
+.card.commentaire.supprime { background: #f0f2f4; box-shadow: none; border: 1px dashed #cbd2d9; }
